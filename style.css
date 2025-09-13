@@ -1,3 +1,5 @@
+    /*GENERAL*/
+    
     * {
         margin: 0;
         padding: 0;
@@ -11,36 +13,40 @@
         min-height: 100vh;
     }
 
-    h1 {
-        text-align: center;
-        font-size: 2.5rem;
-        margin: 2rem 0;
-        color: #d18aff;
-        /*text-shadow: 0 0 10px #d18aff, 0 0 20px #a64fff;*/
-    }
-
-    .logo {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-size: 2rem;
-        font-weight: bold;
-        color: #fff;
-        margin-bottom: 2rem;
-        text-shadow: 0 0 5px #d18aff;
-    }
+/*NAVIGATION BAR*/
 
     .nav-bar {
-        background: rgba(30, 0, 60, 0.85);
+        background: #0a0f21;
         padding: 1rem 0;
         box-shadow: 0 0 15px #6a00ff;
+    }
+
+    .nav-bar nav {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    justify-content: flex-start;
+    padding-left: 2rem; 
+    }
+
+    .nav-bar img {
+        height: 100px;
+        width: auto;
+        cursor: pointer;
+        transition: transform 0.3s ease;
+        margin-right: 1rem;
+        border-radius: 20%;
+    }
+
+    .nav-bar img:hover {
+        transform: scale(1.2) rotate(-5deg);
     }
 
     .nav-bar ul {
         list-style: none;
         display: flex;
         justify-content: center;
-        gap: 2rem;
+        gap: 10px;
     }
 
     .nav-bar a {
@@ -79,3 +85,30 @@
         transform: scale(1.05);
         box-shadow: 0 0 15px #d18aff, 0 0 30px #6a0dad;
     }
+
+/*FOOTER*/
+
+footer {
+    background: #1a0a2e;
+    color: #fff;
+    text-align: center;
+    padding: 2rem 1rem;
+    font-size: 0.9rem;
+    box-shadow: 0 -5px 15px rgba(106, 0, 255, 0.5);
+    margin-top: 3rem;
+}
+
+footer p {
+    margin: 0.5rem 0;
+}
+
+footer a {
+    color: #d18aff;
+    text-decoration: none;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+footer a:hover {
+    color: #fff;
+    text-shadow: 0 0 5px #d18aff;
+}
