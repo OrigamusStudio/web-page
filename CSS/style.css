@@ -75,11 +75,115 @@ body {
     font-weight: bold;
     transition: 0.3s ease;
 }
+    .btn:hover {
+        background: linear-gradient(45deg, #6a0dad, #9b59b6);
+        transform: scale(1.05);
+    }
 
-.btn:hover {
-    background: linear-gradient(45deg, #6a0dad, #9b59b6);
-    transform: scale(1.05);
+/*CONTACTO HTML*/
+
+#contacto-wsp{
+    padding: 20px;
+    align-items: center;
+    margin: 20px auto;
+    width: 40%;
+    background: #491c81;
+    border-radius: 16px;
 }
+
+#contacto-wsp h2 {
+    text-align: center;
+    color: #ffffff;
+    font-weight: bold;
+    padding-bottom: 10px;
+    transition: all 0.3s ease;
+}
+
+#contacto-wsp a, p {
+    text-align: center;
+    display: block;
+    font-weight: bold;
+}
+
+#contacto-wsp #correo{
+    padding-bottom: 15px;
+}
+
+.btn-wsp {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 49%;
+    margin: 5px auto;
+    background: linear-gradient(45deg, #25D366, #128C7E);
+    color: #fff;
+    padding: 0.8rem 1.5rem;
+    border-radius: 12px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+    .btn-wsp:hover {
+        transform: scale(1.05);
+    }
+
+.icon-wsp {
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+
+#contacto {
+    background: linear-gradient(180deg, #491c81, #1a0a2e);
+    color: #fff;
+    padding: 2rem;
+    border-radius: 1rem;
+    max-width: 600px;
+    margin: 2rem auto;
+}
+
+#contacto #contact-title{
+    display: block;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+#contacto input, #contacto textarea {
+    width: 100%;
+    padding: 0.8rem;
+    margin: 0.5rem 0 1rem;
+    border: none;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    background-color:white;
+    color: black;
+}
+
+#contacto input:focus, #contacto textarea:focus {
+    outline: 2px solid #d18aff;
+}
+
+#contacto .btn {
+    display: block;
+    width: 60%;
+    /*padding: 0.8rem 1rem;*/
+    margin: 1rem auto;
+    background: #6a0dad;
+    color: #fff;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+    #contacto .btn:hover {
+        background: #9b59b6;
+        transform: scale(1.05);
+    }
 
 /* FOOTER */
 footer {
@@ -100,11 +204,10 @@ footer a {
     text-decoration: none;
     transition: color 0.3s ease, text-shadow 0.3s ease;
 }
-
-footer a:hover {
-    color: #fff;
-    text-shadow: 0 0 5px #d18aff;
-}
+    footer a:hover {
+        color: #fff;
+        text-shadow: 0 0 5px #d18aff;
+    }
 
 /* MEDIA QUERIES */
 

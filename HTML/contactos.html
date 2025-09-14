@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contactos</title>
-    <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="stylesheet" href="../CSS/style.css?v1.0">
     <link rel="icon" type="image/png" href="../IMG/favicon.png">
 
 </head>
@@ -14,11 +14,47 @@
 
   <main>
 
+    <div id="contacto-wsp">
+      <h2>Contactos</h2>
+
+      <p>Correo</p>
+      <a id="correo" href="mailto:origamustudio@gmail.com" style="color:#d18aff; text-decoration:none;">origamustudio@gmail.com</a>
+
+      <p>Whatsapp</p>
+      <a id="whatsapp" href="https://wa.me/56932681728?text=Hola!%20Quiero%20contactarlos" target="_blank" class="btn-wsp">
+        <img src="../IMG/logo-wsp.png" alt="WhatsApp" class="icon-wsp">
+        Háblanos por Whatsapp
+      </a>
+    </div>
+
+    <!-- Formulario de Contacto -->
+    <section id="contacto">
+      <h2 id="contact-title">Contáctanos</h2>
+      <form action="https://formspree.io/f/xjkedven" method="POST" id="contactForm">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required>
+
+        <label for="email">Correo:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="telefono">Teléfono:</label>
+        <input type="tel" id="telefono" name="telefono">
+
+        <label for="mensaje">Mensaje:</label>
+        <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+
+        <button type="submit" class="btn">Enviar</button>
+      </form>
+
+      <p id="successMessage" style="display:none;color:#d18aff;">¡Mensaje enviado! Gracias por contactarnos.</p>
+    </section>
+    <!-- Formulario de Contacto -->
+
   </main>
 
   <div id="footer-placeholder"></div>
 
-  <script src="../JS/master.js"></script>
+  <script src="../JS/master.js?v1.0"></script>
     
 </body>
 </html>
