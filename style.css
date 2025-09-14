@@ -7,16 +7,15 @@
 }
 
 body {
-    background: linear-gradient(180deg, #0d0d0d, #1a0a2e);
+    background-color: white;
     color: #fff;
     min-height: 100vh;
 }
 
 /* NAVBAR */
 .nav-bar {
-    background: #0a0f21;
+    background: linear-gradient(180deg, #491c81, #1a0a2e);
     padding: 1% 5%;
-    box-shadow: 0 0 15px #6a00ff;
 }
 
 .nav-bar nav {
@@ -33,7 +32,6 @@ body {
     width: auto;
     cursor: pointer;
     transition: transform 0.3s ease;
-    border-radius: 20%;
     margin-right: 3%;
 }
 
@@ -60,7 +58,6 @@ body {
 .nav-bar a:hover {
     background: #6a00ff;
     color: #fff;
-    box-shadow: 0 0 5px #6a00ff, 0 0 10px #d18aff;
     transform: translateY(-3px);
 }
 
@@ -77,13 +74,11 @@ body {
     font-size: 16px;
     font-weight: bold;
     transition: 0.3s ease;
-    box-shadow: 0 0 10px #9b59b6, 0 0 20px #6a0dad;
 }
 
 .btn:hover {
     background: linear-gradient(45deg, #6a0dad, #9b59b6);
     transform: scale(1.05);
-    box-shadow: 0 0 15px #d18aff, 0 0 30px #6a0dad;
 }
 
 /* FOOTER */
@@ -93,7 +88,6 @@ footer {
     text-align: center;
     padding: 20px 5%;
     font-size: 14px;
-    box-shadow: 0 -5px 15px rgba(106, 0, 255, 0.5);
     margin-top: 30px;
 }
 
