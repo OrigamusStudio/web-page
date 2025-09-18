@@ -80,6 +80,63 @@ body {
         transform: scale(1.05);
     }
 
+/*SOBRE NOSOTROS HTML*/
+
+#quienes-somos,#historia-origen,#equipo,#herramientas{
+    padding: 20px;
+    align-items: center;
+    text-align: center;
+    margin: 20px auto;
+    width: 60%;
+    border-radius: 16px;
+    background: #491c81;
+    color:white;
+}
+    #quienes-somos p,#historia-origen p,#equipo p,#herramientas p{
+        font-weight: lighter;
+    }
+    #quienes-somos h2,#historia-origen h2,#equipo h2,#equipo h4,#herramientas h2,#herramientas h4{
+        padding-bottom: 10px;
+    }
+    #equipo img{
+        border-radius: 16px;
+        width: 70px;
+        height: 70px;
+    }
+        .user-icon,.h4-tools{
+            padding-top: 15px;
+        }
+    #herramientas img{
+        border-radius: 16px;
+        width: 25%;
+        height: 5%;
+        padding-top: 15px;
+    }
+
+details {
+  background: #2f1153;
+  margin: 16px auto;
+  padding: 1rem;
+  border-radius: 12px;
+}
+    details:not([open]):hover,#historia-origen:not([open]):hover,#quienes-somos:not([open]):hover,#herramientas:not([open]):hover{
+        background: #1a0a2e;
+    }
+
+summary {
+  cursor: pointer;
+  font-weight: bold;
+  color: white;
+  font-size: 1.2rem;
+  list-style: none;
+  padding-bottom: 10px;
+}
+
+summary::-webkit-details-marker {
+  display: none;
+}
+
+
 /*CONTACTO HTML*/
 
 #contacto-wsp{
