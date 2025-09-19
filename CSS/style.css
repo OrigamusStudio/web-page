@@ -7,7 +7,8 @@
 }
 
 body {
-    background-color: white;
+    /*background-color: white;*/
+    background-image:url("../IMG/back-logo2.png");
     color: #fff;
     min-height: 100vh;
 }
@@ -82,7 +83,7 @@ body {
 
 /*SOBRE NOSOTROS HTML*/
 
-#quienes-somos,#historia-origen,#equipo,#herramientas{
+#quienes-somos,#historia-origen,#origen-logo,#equipo,#herramientas{
     padding: 20px;
     align-items: center;
     text-align: center;
@@ -92,7 +93,7 @@ body {
     background: #491c81;
     color:white;
 }
-    #quienes-somos p,#historia-origen p,#equipo p,#herramientas p{
+    #quienes-somos p,#historia-origen p,#origen-logo p,#equipo p,#herramientas p{
         font-weight: lighter;
     }
     #quienes-somos h2,#historia-origen h2,#equipo h2,#equipo h4,#herramientas h2,#herramientas h4{
@@ -103,15 +104,25 @@ body {
         width: 70px;
         height: 70px;
     }
-        .user-icon,.h4-tools{
+        .h4-tools{
             padding-top: 15px;
         }
-    #herramientas img{
+    #herramientas .tools-icon{
         border-radius: 16px;
         width: 25%;
         height: 5%;
         padding-top: 15px;
     }
+        #godot-logo{
+            padding-top: 15px;
+            width: 10%;
+            height: 10%
+        }
+        #apps-logo,#arte-logo{
+            padding-top: 15px;
+            width: 30%;
+            height: 10%
+        }
 
 details {
   background: #2f1153;
@@ -119,7 +130,7 @@ details {
   padding: 1rem;
   border-radius: 12px;
 }
-    details:not([open]):hover,#historia-origen:not([open]):hover,#quienes-somos:not([open]):hover,#herramientas:not([open]):hover{
+    details:not([open]):hover,#historia-origen:not([open]):hover,#origen-logo:not([open]):hover,#quienes-somos:not([open]):hover,#herramientas:not([open]):hover{
         background: #1a0a2e;
     }
 
@@ -263,7 +274,6 @@ footer a {
 }
     footer a:hover {
         color: #fff;
-        text-shadow: 0 0 5px #d18aff;
     }
 
 /* MEDIA QUERIES */
