@@ -81,6 +81,65 @@ body {
         transform: scale(1.05);
     }
 
+/*PROYECTOS*/
+
+#proyectos-desarrollo,#proyectos-completados,#proyectos-idealizados,#proyectos-individuales{
+    padding: 20px;
+    align-items: center;
+    text-align: center;
+    margin: 20px auto;
+    width: 60%;
+    border-radius: 16px;
+    background: #491c81;
+    color:white;
+}
+
+#proyectos-desarrollo details,#proyectos-completados details,#proyectos-idealizados details,#proyectos-individuales details{
+  background: #2f1153;
+  margin: 16px auto;
+  padding: 1rem;
+  border-radius: 12px;
+}
+    #proyectos-desarrollo:not([open]):hover,#proyectos-completados:not([open]):hover,#proyectos-idealizados:not([open]):hover,#proyectos-individuales:not([open]):hover{
+        background: #1a0a2e;
+    }
+
+.tarjetas {
+  display: flex;
+  gap: 5%;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: #2f1153;
+  padding: 16px;
+  border-radius: 10px;
+  width: 20%;
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  background: #1a0a2e;
+}
+
+.card h3{
+    padding-bottom: 10px;
+}
+.card p{
+    padding-bottom: 10px;
+    font-weight: lighter;
+}
+.card a{
+    text-decoration: none;
+    color: inherit;
+    font-weight: bold;
+}
+    .card a:hover{
+        color:#6e29c4;
+    }
+
 /*SOBRE NOSOTROS HTML*/
 
 #quienes-somos,#historia-origen,#origen-logo,#equipo,#herramientas{
@@ -209,7 +268,7 @@ summary::-webkit-details-marker {
     color: #fff;
     padding: 2rem;
     border-radius: 1rem;
-    max-width: 600px;
+    max-width: 40%;
     margin: 2rem auto;
 }
 
