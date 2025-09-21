@@ -112,11 +112,14 @@ body {
 }
 
 .card {
-  background: #2f1153;
-  padding: 16px;
-  border-radius: 10px;
-  width: 20%;
-  transition: transform 0.2s;
+    display: flex;
+    gap: 5%;
+    background: #2f1153;
+    padding: 16px;
+    border-radius: 10px;
+    width: 400px;
+    transition: transform 0.2s;
+    box-sizing: border-box;
 }
 
 .card:hover {
@@ -124,21 +127,37 @@ body {
   background: #1a0a2e;
 }
 
+.card div{
+    flex: 1;
+    min-width: 0;
+}
+
 .card h3{
     padding-bottom: 10px;
 }
 .card p{
-    padding-bottom: 10px;
+    padding-bottom: 15px;
     font-weight: lighter;
 }
 .card a{
+    display: inline-block;
     text-decoration: none;
     color: inherit;
     font-weight: bold;
+    background: #6e29c4;
+    padding: 8px 16px;
+    border-radius: 6px;
+    transition: background 0.2s, transform 0.2s;
 }
     .card a:hover{
-        color:#6e29c4;
+        background:#431a76;
+         transform: scale(1.05);
     }
+.card img{
+    width: 40%;
+    height: auto;
+    vertical-align: middle;
+}
 
 /*SOBRE NOSOTROS HTML*/
 
