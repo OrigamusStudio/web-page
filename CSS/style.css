@@ -226,6 +226,23 @@ summary::-webkit-details-marker {
   display: none;
 }
 
+/*POSDATA ANITA*/ /*Es algo personal mio, ignorar*/
+
+#posdataanita{
+    text-decoration: none;
+    color: white;
+}
+
+.fondo-anita{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    z-index: -1;
+    background-color: #88cdca;
+}
 
 /*CONTACTO HTML*/
 
