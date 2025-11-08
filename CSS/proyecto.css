@@ -1,0 +1,567 @@
+/* ============================================= */
+/* #region PROYECTOS (GALERÍA - .card) */
+/* ============================================= */
+
+details {
+  margin: 16px auto;
+  transition: background 0.2s ease;
+}
+
+details.content-section:not([open]):hover {
+    background: var(--color-bg-dark);
+    border-color: transparent;
+}
+
+summary {
+  cursor: pointer;
+  font-weight: bold;
+  font-family: 'Montserrat', sans-serif;
+  color: var(--color-text);
+  list-style: none;
+  padding-bottom: 10px;
+}
+summary::-webkit-details-marker {
+  display: none;
+}
+
+.content-section > summary {
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.tarjetas {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding-top: 1rem;
+}
+
+.card {
+    display: flex;
+    flex-direction: column; 
+    background: var(--color-bg-medium);
+    border-radius: var(--radius-main); 
+    overflow: hidden; 
+    flex: 1 1 380px;
+    max-width: 500px;
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    opacity: 0; 
+    animation: fadeInUp 0.8s ease-out both;
+    animation-timeline: view();
+    animation-range: entry 0% cover 30%;
+}
+
+.card img {
+    width: 100%;
+    height: 200px; 
+    object-fit: cover;
+    margin: 0; 
+    transition: transform 0.4s ease-out;
+}
+
+.card div {
+    padding: 1.5rem; 
+    flex: 1; 
+    margin: 0; 
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  background: var(--color-bg-medium); 
+}
+
+.card:hover img {
+    transform: scale(1.1);
+}
+
+.card:hover h3 {
+    color: var(--color-primary-light);
+}
+
+.card h3 {
+    padding-bottom: 10px;
+    font-family: 'Montserrat', sans-serif;
+    color: var(--color-primary-accent);
+    transition: color 0.3s ease;
+}
+
+.card h4 {
+    padding-top: 10px;
+}
+
+.card p {
+    padding-bottom: 15px;
+    font-weight: normal;
+    line-height: 1.5;
+    text-align: left;
+    color: #ddd;
+}
+
+.card a {
+    display: inline-block;
+    text-decoration: none;
+    color: var(--color-text);
+    font-weight: bold;
+    background: var(--color-primary);
+    padding: 8px 16px;
+    border-radius: 8px;
+    transition: background 0.2s, transform 0.2s;
+}
+    .card a:hover {
+        background: var(--color-primary-light);
+         transform: scale(1.05);
+    }
+
+/* #endregion */
+/* ============================================= */
+
+/* ============================================= */
+/* #region PÁGINA DE PROYECTO INDIVIDUAL (DETALLE) */
+/* ============================================= */
+
+.main-content-area {
+    padding-top: 30px; 
+    position: relative;
+    z-index: 1; 
+}
+
+.back-to-projects {
+    display: inline-block; 
+    margin-bottom: 1.5rem; 
+    text-decoration: none;
+    color: var(--color-primary-accent);
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: transform 0.2s ease;
+}
+.back-to-projects:hover {
+    transform: translateX(-5px);
+}
+
+.project-hero {
+    width: 100%;
+    max-width: 100%;
+    margin-top: 0;
+    border-radius: 0;
+    padding: 4rem 2rem;
+    background-image: linear-gradient(rgba(26, 10, 46, 0.8), rgba(26, 10, 46, 0.9)), url('../IMG/marca-portada.png');
+    background-size: cover;
+    background-position: center;
+    
+    animation: fadeInUp 0.8s ease-out both;
+    animation-timeline: view();
+    animation-range: entry 0% cover 30%;
+}
+
+.project-hero-content {
+    text-align: center;
+}
+
+.project-hero h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3rem;
+    color: #fff;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+    margin: 0;
+    padding: 0;
+}
+.project-subtitle {
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: var(--color-primary-accent);
+    padding-top: 0.5rem;
+}
+
+#hero-biblioteca-app {
+    background-image: linear-gradient(rgba(26, 10, 46, 0.8), rgba(26, 10, 46, 0.9)), url('../IMG/biblioteca-app-banner.png');
+}
+#hero-origamus-pos {
+    background-image: linear-gradient(rgba(26, 10, 46, 0.8), rgba(26, 10, 46, 0.9)), url('../IMG/origamus-pos-banner.png');
+}
+
+
+.project-layout {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    max-width: 1100px;
+    margin: 2rem auto;
+    padding: 0 5%;
+    align-items: flex-start;
+}
+.project-main-content {
+    flex: 2 1 600px;
+}
+.project-sidebar {
+    flex: 1 1 300px;
+    position: sticky;
+    top: 110px; 
+    z-index: 2; 
+}
+
+.project-layout .content-section {
+    margin: 0;
+    width: 100%;
+    max-width: 100%;
+    text-align: left;
+}
+.project-layout .content-section h2,
+.project-layout .content-section h3 {
+    text-align: left;
+}
+
+.project-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+}
+.project-gallery img {
+    width: 100%;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+.project-gallery img:hover {
+    transform: scale(1.05);
+}
+
+.tech-stack {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 1.5rem;
+}
+.tech-stack li {
+    padding: 0.75rem 0;
+    border-bottom: 1px solid var(--color-bg-medium);
+    color: #ddd;
+}
+.tech-stack li:first-child { padding-top: 0; }
+.tech-stack li:last-child { border-bottom: none; padding-bottom: 0; }
+
+.tech-stack li strong {
+    color: var(--color-primary-accent);
+    margin-right: 0.5rem;
+}
+
+.project-sidebar .btn {
+    width: 100%;
+    text-align: center;
+    margin: 10px 0 0 0;
+}
+.project-sidebar .btn-secondary {
+    margin-top: 10px;
+}
+
+/* #endregion */
+/* ============================================= */
+
+/* ============================================= */
+/* #region OPCIÓN B: DISEÑO "APP STORE" */
+/* ============================================= */
+
+/* --- Botón Volver (Alternativo) --- */
+.back-to-projects-alt {
+    flex-basis: 100%;
+    text-align: left;
+    margin-bottom: 1.5rem;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    padding: 0;
+    color: var(--color-primary-accent);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: transform 0.2s ease;
+}
+
+.back-to-projects-alt:hover {
+    transform: translateX(-5px);
+}
+
+.project-header-alt {
+    display: flex;
+    flex-wrap: wrap; 
+    align-items: center;
+    gap: 1.5rem 2rem;
+    background: var(--color-bg-medium);
+}
+
+.project-icon-alt {
+    width: 120px;
+    height: 120px;
+    border-radius: var(--radius-large);
+    object-fit: cover;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.header-text-alt {
+    flex: 1; 
+    text-align: left;
+}
+.header-text-alt h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5rem;
+    color: #fff;
+    padding: 0;
+    margin: 0;
+}
+.header-text-alt p {
+    font-size: 1.2rem;
+    font-weight: 300;
+    color: var(--color-primary-accent);
+    padding: 0;
+    margin: 0.5rem 0 0 0;
+    text-align: left !important;
+}
+
+.header-cta-alt {
+    margin-left: auto; 
+}
+.header-cta-alt .btn {
+    margin: 0; 
+}
+
+.project-gallery-alt {
+    padding-bottom: 2.5rem;
+}
+.gallery-grid-alt {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin-top: 1rem;
+}
+.gallery-grid-alt img {
+    width: 100%;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.gallery-grid-alt img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.project-layout-alt {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin: 2rem auto;
+    padding: 0; 
+    align-items: flex-start;
+}
+
+.project-layout-alt > section:nth-child(1) {
+    flex: 2 1 500px;
+    margin: 0;
+}
+
+.project-layout-alt > section:nth-child(2) {
+    flex: 1 1 300px;
+    margin: 0;
+    background: var(--color-bg-medium);
+}
+
+.tech-stack-alt {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0 0 0;
+}
+.tech-stack-alt li {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid var(--color-bg-light);
+    color: #ddd;
+}
+.tech-stack-alt li:last-child {
+    border-bottom: none;
+}
+.tech-stack-alt li strong {
+    color: var(--color-primary-accent);
+    margin-right: 1rem;
+}
+
+@media (max-width: 768px) {
+    .project-header-alt {
+        flex-direction: column;
+        text-align: center;
+    }
+    .header-text-alt {
+        text-align: center;
+    }
+    .header-text-alt p {
+        text-align: center !important;
+    }
+    .header-cta-alt {
+        margin: 1rem 0 0 0;
+        width: 100%;
+    }
+    .header-cta-alt .btn {
+        width: 100%;
+    }
+}
+
+/* #endregion */
+/* ============================================= */
+
+/* ============================================= */
+/* #region MODAL DE GALERÍA DE IMÁGENES */
+/* ============================================= */
+
+/* El fondo (backdrop) - oculto por defecto */
+.modal-backdrop {
+    display: flex;
+    align-items: center; /* Centra verticalmente */
+    justify-content: center; /* Centra horizontalmente */
+    
+    position: fixed; /* Esto es clave para que se quede en la ventana */
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100vw;   /* CAMBIO: Ocupa el 100% del ancho del viewport */
+    height: 100vh;  /* CAMBIO: Ocupa el 100% de la altura del viewport */
+    
+    background-color: rgba(26, 10, 46, 0.9);
+    
+    opacity: 0;
+    pointer-events: none; 
+    
+    transition: opacity 0.3s ease;
+}
+
+/* CAMBIO: Clase que añade JS para mostrarlo */
+.modal-backdrop.active {
+    opacity: 1;
+    pointer-events: auto; /* Se puede cliquear */
+}
+
+/* La imagen expandida */
+.modal-content {
+    margin: 0; /* Ya no necesita 'margin: auto' */
+    display: block;
+    max-width: 80%;
+    max-height: 80vh;
+    
+    transform: scale(0.8);
+    transition: transform 0.3s ease;
+}
+
+/* CAMBIO: Animación de entrada */
+.modal-backdrop.active .modal-content {
+    transform: scale(1);
+}
+
+/* El botón de cerrar (X) */
+.modal-close {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+.modal-close:hover,
+.modal-close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(26, 10, 46, 0.5); /* Fondo sutil */
+    color: #fff;
+    border: none;
+    font-size: 2.5rem;
+    padding: 1rem 0.5rem;
+    cursor: pointer;
+    transition: background 0.2s ease;
+    z-index: 2001; /* Encima de la imagen */
+    user-select: none; /* Evita que se seleccione el texto */
+}
+
+.modal-nav:hover {
+    background: var(--color-bg-light); /* Tu color morado */
+}
+
+.modal-prev {
+    left: 100px;
+    border-radius: 0 8px 8px 0;
+}
+
+.modal-next {
+    right: 100px;
+    border-radius: 8px 0 0 8px;
+}
+
+/* Oculta los botones si JS los deshabilita */
+.modal-nav[disabled] {
+    opacity: 0.2;
+    cursor: default;
+    pointer-events: none;
+}
+
+/* #endregion */
+/* ============================================= */
+
+/* ============================================= */
+/* #region ESTILOS "LEER MÁS" (DESCRIPCIÓN) */
+/* ============================================= */
+
+/* 1. El contenedor (oculto por defecto) */
+.expandable-content {
+    max-height: 0; /* Oculto por defecto */
+    opacity: 0;
+    overflow: hidden;
+    
+    /* Animación suave */
+    transition: max-height 0.5s ease-out, opacity 0.3s ease-out;
+}
+
+/* 2. El estado expandido (añadido por JS) */
+.expandable-content.expanded {
+    max-height: 2000px; /* Un valor alto para el contenido */
+    opacity: 1;
+}
+
+/* 3. El botón "Leer más" */
+.btn-expand {
+    display: inline-block;
+    margin-top: 1.5rem;
+    color: var(--color-primary-accent);
+    background: rgba(0,0,0,0.1); /* Fondo sutil */
+    border: none;
+    cursor: pointer;
+    font-size: 1.1rem;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 8px;
+    transition: background-color 0.2s ease;
+}
+
+.btn-expand:hover {
+    background-color: rgba(0,0,0,0.2);
+}
+
+/* 4. La flecha del botón */
+.btn-expand .icon-arrow {
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+/* 5. La flecha girada (añadido por JS) */
+.btn-expand.expanded .icon-arrow {
+    transform: rotate(180deg);
+}
+
+/* #endregion */
+/* ============================================= */

@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sobre Nosotros</title>
     <link rel="stylesheet" href="../CSS/style.css?v1.2">
+    <link rel="stylesheet" href="../CSS/sobre-nosotros.css?v1.2">
     <link rel="icon" type="image/png" href="../IMG/favicon.png">
 
 </head>
@@ -14,7 +15,7 @@
 
   <main>
 
-    <details id="quienes-somos">
+    <details id="quienes-somos" class="content-section width-narrow">
       <summary>¿Quiénes Somos?</summary>
       <p>
         Origamus Studio es un equipo en crecimiento dedicado al desarrollo audiovisual (apps/juegos)
@@ -26,7 +27,7 @@
       </p>
     </details>
 
-    <details id="historia-origen">
+    <details id="historia-origen" class="content-section width-narrow">
       <summary>Historia de Origen</summary>
       <p>
         El origen de Origamus Studio se remonta a una idea que surgió en el año 2024... ¿Qué pasa si creo un
@@ -42,7 +43,7 @@
       </p>
     </details>
 
-    <details id="origen-logo">
+    <details id="origen-logo" class="content-section width-narrow">
       <summary>Historia de Origen del Nombre, Logo y Eslogan</summary>
       <p>
         El origen del nombre de Origamus Studio fue toda una encrucijada, ya que tuvo múltiples intentos e ideas, 
@@ -67,75 +68,67 @@
 
     </details>
 
-    <div id="equipo">
-      <h2>Integrantes del Equipo</h2>
+  <section id="equipo" class="content-section width-wide">
+    <h2>Integrantes del Equipo</h2>
+    
+    <div class="team-grid">
+      
+      <article class="team-card">
+        <img src="../IMG/Logo-Gospi.png" alt="Logo GospiDev" class="team-member-icon">
+        <h3>Javier Riquelme (GospiDev)</h3>
+        <h4>Labor: Múltiples Áreas</h4>
+        <p>
+          Fundador del equipo "Origamus Studio". Se encarga de liderar los proyectos y organizar al equipo.
+          Centrado en cumplir múltiples tareas para ayudar al desarrollo de todas las áreas de un proyecto.
+        </p>
+        <p class="personal-note">
+          <i>(Pd: Todo esto se lo agradezco a quien mas me motivó... Mi pareja Anita, gracias por todo... <a class="personal-note-link" href="posdataAnita.html"><b>Te amo!</b></a>)</i>
+        </p>
+      </article>
 
-      <details>
-        <summary>Javier Riquelme (GospiDev)</summary>
-        <div class="equipo" id="javier">
-          <img src="../IMG/Logo-Gospi.png" alt="" class="first-user-icon">
-          <h4>Labor: Múltiples Áreas</h4>
-          <p>
-            Fundador del equipo "Origamus Studio". Se encarga de liderar los proyectos y organizar al equipo.
-            Centrado en cumplir múltiples tareas para ayudar al desarrollo de todas las áreas de un proyecto.
-          </p>
-          <p>
-            <i>(Pd: Todo esto se lo agradezco a quien mas me motivó... Mi pareja Anita, gracias por todo... <a id="posdataanita" href="posdataAnita.html"><b>Te amo!</b></a>)</i>
-          </p>
-        </div>
-      </details>
+      <article class="team-card">
+        <img src="../IMG/user-icon.png" alt="Icono de Usuario" class="team-member-icon">
+        <h3>Christian Vidal (Chris)</h3>
+        <h4>Labor: Programación/Diseño</h4>
+        <p>
+          Uno de los miembros más actuales del equipo y con grandes capacidades para la programación. Posee 
+          experiencia previa en el uso del motor de desarrollo "Godot Engine" y en lenguajes como "GDScript".
+        </p>
+      </article>
 
-      <details>
-        <summary>Christian Vidal (Chris)</summary>
-        <div class="equipo" id="christian">
-          <img src="../IMG/user-icon.png" alt="" class="user-icon">
-          <h4>Labor: Programación/Diseño</h4>
-          <p>
-            Uno de los miembros más actuales del equipo y con grandes capacidades para la programación. Posee 
-            experiencia previa en el uso del motor de desarrollo "Godot Engine" y en lenguajes como "GDScript".
-          </p>
-        </div>
-      </details>
+      <article class="team-card">
+        <img src="../IMG/user-icon.png" alt="Icono de Usuario" class="team-member-icon">
+        <h3>Cristofer Altamirano (Crofer)</h3>
+        <h4>Labor: Arte/Sonido/Narrativa</h4>
+        <p>
+          Un miembro indispensable en el equipo por su conocimiento en el área de sonido/música. Se encarga de 
+          aportar en aspectos de creatividad y narrativa global del proyecto.
+        </p>
+      </article>
 
-      <details>
-        <summary>Cristofer Altamirano (Crofer)</summary>
-        <div class="equipo" id="cristofer">
-          <img src="../IMG/user-icon.png" alt="" class="user-icon">
-          <h4>Labor: Arte/Sonido/Narrativa</h4>
-          <p>
-            Un miembro indispensable en el equipo por su conocimiento en el área de sonido/música. Se encarga de 
-            aportar en aspectos de creatividad y narrativa global del proyecto.
-          </p>
-        </div>
-      </details>
+      <article class="team-card">
+        <img src="../IMG/user-icon.png" alt="Icono de Usuario" class="team-member-icon">
+        <h3>Nicolás Álvarez</h3>
+        <h4>Labor: Programación/Diseño</h4>
+        <p>
+          Centrado en la labor de programación de mecánicas y funcionalidades, y diseño general del proyecto. Nuestro 
+          miembro que formó parte del origen de "Origamus Studio".
+        </p>
+      </article>
 
-      <details>
-        <summary>Nicolás Álvarez</summary>
-        <div class="equipo" id="nicolas">
-          <img src="../IMG/user-icon.png" alt="" class="user-icon">
-          <h4>Labor: Programación/Diseño</h4>
-          <p>
-            Centrado en la labor de programación de mecánicas y funcionalidades, y diseño general del proyecto. Nuestro 
-            miembro que formó parte del origen de "Origamus Studio".
-          </p>
-        </div>
-      </details>
-
-      <details>
-        <summary>Pablo Gutiérrez</summary>
-        <div class="equipo" id="pablo">
-          <img src="../IMG/user-icon.png" alt="" class="user-icon">
-          <h4>Labor: Arte/Narrativa</h4>
-          <p>
-            Otro de los miembros que participó en el origen de "Origamus Studio", está centrado en el área de diseño gráfico 
-            y arte del proyecto, con ideas creativas y alocadas que aportan novedad al mismo.
-          </p>
-        </div>
-      </details>
-
+      <article class="team-card">
+        <img src="../IMG/user-icon.png" alt="Icono de Usuario" class="team-member-icon">
+        <h3>Pablo Gutiérrez</h3>
+        <h4>Labor: Arte/Narrativa</h4>
+        <p>
+          Otro de los miembros que participó en el origen de "Origamus Studio", está centrado en el área de diseño gráfico 
+          y arte del proyecto, con ideas creativas y alocadas que aportan novedad al mismo.
+        </p>
+      </article>
     </div>
+  </section>
 
-    <details id="herramientas">
+    <details id="herramientas" class="content-section width-narrow">
       <summary>Herramientas y Tecnologías</summary>
       <p>
         Siempre queremos otorgar transparencia en la forma en que desarrollamos los distintos proyectos y aspectos 
@@ -148,27 +141,27 @@
         al lenguaje de marcado HTML5, el lenguaje de estilos CSS y el lenguaje de programación JavaScript. Todo 
         esto en relación al frontend ya que no usamos backend (por el momento).
       </p>
-      <img src="../IMG/web-logos.png" alt="" class="tools-icon">
+      <img src="../IMG/web-logos.png" alt="Logos HTML, CSS, JS" class="tools-icon-web">
 
       <h4 class="h4-tools">Herramientas de Desarrollo de Videojuegos</h4>
       <p>Para el desarrollo de videojuegos se utiliza como entorno de programación el motor de videojuegos 
         Godot Engine, en conjunto con su lenguaje nativo GDScript. Este es un motor de código abierto que 
         permite el desarrollo tanto en 2D como en 3D, este último aún en evolución.
       </p>
-      <img id="godot-logo" src="../IMG/godot-logo.png" alt="" class="">
+      <img src="../IMG/godot-logo.png" alt="Logo Godot Engine" class="tools-icon-godot">
 
       <h4 class="h4-tools">Herramientas de Desarrollo de Aplicaciones</h4>
       <p>Para el desarrollo de aplicaciones se utilizan los IDEs Visual Studio Code y Visual Studio (Community Version), 
         con lenguajes múltiples según la necesidad y el proyecto, como pueden ser: C, C# y Java.
       </p>
-      <img id="apps-logo" src="../IMG/apps-logo.png" alt="" class="">
+      <img src="../IMG/apps-logo.png" alt="Logos C, C#, Java" class="tools-icon-apps">
 
       <h4 class="h4-tools">Herramientas de Diseño</h4>
       <p>Para el apartado de diseño y gráficos se utilizan diversas herramientas cada una según la necesidad, como lo son: 
         Inkscape (diseño vectorial), Krita (dibujo y edición digital), Pixelorama (gráficos pixel), Blender (modelado 3D), 
         Blockbench (modelado 3D low poly).
       </p>
-      <img id="arte-logo" src="../IMG/arte-logo.png" alt="" class="">
+      <img src="../IMG/arte-logo.png" alt="Logos Inkscape, Krita, Blender" class="tools-icon-art">
 
     </details>
 
@@ -176,7 +169,7 @@
 
   <div id="footer-placeholder"></div>
 
-  <script src="../JS/master.js?v1.0"></script>
+  <script src="/JS/master.js?v1.1"></script>
     
 </body>
 </html>

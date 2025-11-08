@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contactos</title>
-    <link rel="stylesheet" href="../CSS/style.css?v1.1">
+    <link rel="stylesheet" href="../CSS/style.css?v1.2">
+    <link rel="stylesheet" href="../CSS/contacto.css?v1.2">
     <link rel="icon" type="image/png" href="../IMG/favicon.png">
-
 </head>
 <body>
 
@@ -14,47 +14,58 @@
 
   <main>
 
-    <div id="contacto-wsp">
+    <section id="contact-info" class="content-section width-narrow">
       <h2>Contactos</h2>
 
       <p>Correo</p>
-      <a id="correo" href="mailto:origamustudio@gmail.com" style="color:#d18aff; text-decoration:none;">origamustudio@gmail.com</a>
+      <a id="correo" href="mailto:origamustudio@gmail.com" class="contact-link-email">origamustudio@gmail.com</a>
 
       <p>Whatsapp</p>
       <a id="whatsapp" href="https://wa.me/56937312949?text=Hola!%20Quiero%20contactarlos" target="_blank" class="btn-wsp">
         <img src="../IMG/logo-wsp.png" alt="WhatsApp" class="icon-wsp">
         Háblanos por Whatsapp
       </a>
-    </div>
+    </section>
 
-    <!-- Formulario de Contacto -->
-    <section id="contacto">
-      <h2 id="contact-title">Te contactamos</h2>
+    <section id="contact-form-section" class="content-section width-narrow section-gradient">
+      
       <form action="https://formspree.io/f/xjkedven" method="POST" id="contactForm">
-        <label for="nombre">Nombre:</label>
-        <input type="text" id="nombre" name="nombre" required>
+        <h2 style="padding-bottom: 1rem;">Te contactamos</h2>
 
-        <label for="email">Correo:</label>
-        <input type="email" id="email" name="email" required>
-
-        <label for="telefono">Teléfono:</label>
-        <input type="tel" id="telefono" name="telefono">
-
-        <label for="mensaje">Mensaje:</label>
-        <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
-
+        <div class="form-field">
+          <input type="text" id="nombre" name="nombre" placeholder=" " required>
+          <label for="nombre">Nombre:</label>
+        </div>
+        
+        <div class="form-field">
+          <input type="email" id="email" name="email" placeholder=" " required>
+          <label for="email">Correo:</label>
+        </div>
+        
+        <div class="form-field">
+          <input type="tel" id="telefono" name="telefono" placeholder=" ">
+          <label for="telefono">Teléfono (Opcional):</label>
+        </div>
+        
+        <div class="form-field">
+          <textarea id="mensaje" name="mensaje" rows="5" placeholder=" " required></textarea>
+          <label for="mensaje">Mensaje:</label>
+        </div>
+        
         <button type="submit" class="btn">Enviar</button>
+        
       </form>
 
-      <p id="successMessage" style="display:none;color:#d18aff;">¡Mensaje enviado! Gracias por contactarnos.</p>
+      <p id="successMessage" class="form-success-message" style="display:none;">
+        ¡Mensaje enviado! Gracias por contactarnos.
+      </S>
     </section>
-    <!-- Formulario de Contacto -->
 
   </main>
 
   <div id="footer-placeholder"></div>
 
-  <script src="../JS/master.js?v1.0"></script>
+  <script src="/JS/master.js?v1.1"></script>
     
 </body>
 </html>

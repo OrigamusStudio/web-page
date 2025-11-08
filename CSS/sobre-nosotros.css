@@ -1,0 +1,120 @@
+/* ============================================= */
+/* #region SOBRE-NOSOTROS */
+/* ============================================= */
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem; 
+    padding-top: 1rem;
+    text-align: left; 
+}
+
+.team-card {
+    background: var(--color-bg-medium);
+    border-radius: var(--radius-main);
+    padding: 1.5rem;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.team-card:hover {
+    transform: translateY(-5px); 
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    background: var(--color-bg-dark); 
+}
+
+.team-member-icon {
+    width: 100px; 
+    height: 100px;
+    border-radius: 50%; 
+    margin: 0 auto 1rem auto; 
+    display: block;
+    object-fit: cover; 
+    border: 3px solid var(--color-primary-accent); 
+}
+
+.team-card h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.3rem;
+    color: var(--color-primary-accent);
+    margin-bottom: 0.25rem;
+}
+
+.team-card h4 {
+    font-size: 1rem;
+    color: var(--color-text);
+    font-weight: normal;
+    margin-bottom: 0.75rem;
+    padding-bottom: 0; 
+}
+
+.team-card p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: #ddd; 
+    text-align: center !important;
+    padding-bottom: 0;
+}
+
+.personal-note {
+    font-size: 0.8rem;
+    font-style: italic;
+    color: #aaa;
+    margin-top: 1rem;
+    border-top: 1px solid var(--color-bg-light);
+    padding-top: 1rem;
+}
+
+#herramientas h4:first-of-type {
+    border-top: none;
+    margin-top: 0;
+}
+
+.tools-icon-web,
+.tools-icon-godot,
+.tools-icon-apps,
+.tools-icon-art {
+    border-radius: var(--radius-main);
+    height: auto; 
+    padding-top: 15px;
+    max-width: 100%; 
+    display: block; 
+    margin: 0 auto;
+}
+
+.tools-icon-web { width: 50%; }
+.tools-icon-godot { width: 20%; min-width: 100px; }
+.tools-icon-apps { width: 70%; }
+.tools-icon-art { width: 70%; }
+
+/* #endregion */
+/* ============================================= */
+
+/* ============================================= */
+/* #region POSDATA-ANITA */
+/* ============================================= */
+
+.personal-note-link {
+    text-decoration: none;
+    color: var(--color-text);
+    font-weight: bold;
+}
+    .personal-note-link:hover {
+        text-decoration: underline;
+    }
+
+.fondo-anita{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    z-index: -1;
+    background-color: #88cdca;
+}
+
+/* #endregion */
+/* ============================================= */
