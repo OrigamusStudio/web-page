@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    
+    <url>
+        <loc>https://www.origamustudio.org/</loc>
+        <priority>1.00</priority>
+    </url>
+    
+    <url>
+        <loc>https://www.origamustudio.org/proyectos.html</loc>
+        <priority>0.90</priority>
+    </url>
+    <url>
+        <loc>https://www.origamustudio.org/sobre-nosotros.html</loc>
+        <priority>0.80</priority>
+    </url>
+    <url>
+        <loc>https://www.origamustudio.org/contactos.html</loc>
+        <priority>0.80</priority>
+    </url>
+    <url>
+        <loc>https://www.origamustudio.org/devblog.html</loc>
+        <priority>0.70</priority>
+    </url>
+    <url>
+        <loc>https://www.origamustudio.org/noticias.html</loc>
+        <priority>0.70</priority>
+    </url>
+    <url>
+        <loc>https://www.origamustudio.org/faq.html</loc>
+        <priority>0.60</priority>
+    </url>
+    
+    <url>
+        <loc>https://www.origamustudio.org/PROYECTOS/origamus-pos.html</loc>
+        <priority>0.85</priority>
+    </url>
+    <url>
+        <loc>https://www.origamustudio.org/PROYECTOS/librarium.html</loc>
+        <priority>0.85</priority>
+    </url>
+    
+    <url>
+        <loc>https://www.origamustudio.org/politica-privacidad.html</loc>
+        <priority>0.10</priority>
+    </url>
+    
+</urlset>
